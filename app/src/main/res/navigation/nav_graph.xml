@@ -5,5 +5,13 @@
     <fragment
         android:id="@+id/loginScreen"
         android:name="com.afrodroid.shoestore.screens.login_screen.LoginScreen"
-        android:label="LoginScreen" />
+        android:label="LoginScreen" >
+        <action
+            android:id="@+id/action_loginScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.afrodroid.shoestore.screens.welcome_screen.WelcomeScreen"
+        android:label="WelcomeScreen" />
 </navigation>

@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import com.afrodroid.shoestore.R
 import com.afrodroid.shoestore.databinding.LoginScreenFragmentBinding
 import timber.log.Timber
 
@@ -26,7 +30,10 @@ class LoginScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = LoginScreenFragmentBinding.inflate(inflater,container, false)
+        binding.loginButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginScreen_to_welcomeScreen))
+        binding.loginWithExistingAccount.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginScreen_to_welcomeScreen))
         return binding.root
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
