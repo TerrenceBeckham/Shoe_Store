@@ -4,6 +4,6 @@
     app:startDestination="@id/loginScreen">
     <fragment
         android:id="@+id/loginScreen"
-        android:name="com.afrodroid.shoestore.screens.LoginScreen"
+        android:name="com.afrodroid.shoestore.screens.login_screen.LoginScreen"
         android:label="LoginScreen" />
 </navigation>

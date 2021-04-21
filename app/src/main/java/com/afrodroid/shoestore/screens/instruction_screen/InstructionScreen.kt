@@ -1,4 +1,4 @@
-package com.afrodroid.shoestore.screens
+package com.afrodroid.shoestore.screens.instruction_screen
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,34 +7,34 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.afrodroid.shoestore.R
+import com.afrodroid.shoestore.databinding.InstructionScreenFragmentBinding
 import com.afrodroid.shoestore.databinding.WelcomeScreenBinding
 import timber.log.Timber
 
-class WelcomeScreen : Fragment() {
+class InstructionScreen : Fragment() {
 
     companion object {
-        fun newInstance() = WelcomeScreen()
+        fun newInstance() = InstructionScreen()
     }
 
-    private var _binding: WelcomeScreenBinding? = null
+    private var _binding: InstructionScreenFragmentBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var viewModel: WelcomeViewModel
+    private lateinit var viewModel: InstructionScreenViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = WelcomeScreenBinding.inflate(inflater, container, false)
+
+        _binding = InstructionScreenFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(InstructionScreenViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

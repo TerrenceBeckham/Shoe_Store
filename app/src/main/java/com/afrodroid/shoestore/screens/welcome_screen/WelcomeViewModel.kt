@@ -1,4 +1,4 @@
-package com.afrodroid.shoestore.screens
+package com.afrodroid.shoestore.screens.welcome_screen
 
 import androidx.lifecycle.ViewModel
 
