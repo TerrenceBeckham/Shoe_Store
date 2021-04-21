@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Shoe Store</string>
+    <string name="email_label">Email</string>
+    <string name="email_field">E-mail</string>
+    <string name="password_hint">Password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="login_with_existing_account">Login with existing account</string>
+    <string name="shoe_box_image">Shoe Box Image</string>
 </resources>
