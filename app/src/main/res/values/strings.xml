@@ -8,4 +8,7 @@
     <string name="login">Login</string>
     <string name="login_with_existing_account">Login with existing account</string>
     <string name="shoe_box_image">Shoe Box Image</string>
+    <string name="welcome_to_my_shoe_store">Welcome to my shoe store</string>
+    <string name="have_a_look_around">Have a look around</string>
+    <string name="instructions">Instructions</string>
 </resources>
