@@ -13,21 +13,5 @@
     <fragment
         android:id="@+id/welcomeScreen"
         android:name="com.afrodroid.shoestore.screens.welcome_screen.WelcomeScreen"
-        android:label="WelcomeScreen" >
-        <action
-            android:id="@+id/action_welcomeScreen_to_instructionScreen"
-            app:destination="@id/instructionScreen" />
-    </fragment>
-    <fragment
-        android:id="@+id/instructionScreen"
-        android:name="com.afrodroid.shoestore.screens.instruction_screen.InstructionScreen"
-        android:label="InstructionScreen" >
-        <action
-            android:id="@+id/action_instructionScreen_to_shoeListScreen"
-            app:destination="@id/shoeListScreen" />
-    </fragment>
-    <fragment
-        android:id="@+id/shoeListScreen"
-        android:name="com.afrodroid.shoestore.screens.shoelist_screen.ShoeListScreen"
-        android:label="ShoeListScreen" />
+        android:label="WelcomeScreen" />
 </navigation>

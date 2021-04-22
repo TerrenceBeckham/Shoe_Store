@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import com.afrodroid.shoestore.R
 import com.afrodroid.shoestore.databinding.InstructionScreenFragmentBinding
 import com.afrodroid.shoestore.databinding.WelcomeScreenBinding
@@ -28,7 +27,6 @@ class InstructionScreen : Fragment() {
     ): View? {
 
         _binding = InstructionScreenFragmentBinding.inflate(inflater, container, false)
-        binding.shoeListScreenButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_instructionScreen_to_shoeListScreen))
         return binding.root
     }
 
@@ -37,7 +35,6 @@ class InstructionScreen : Fragment() {
         viewModel = ViewModelProvider(this).get(InstructionScreenViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

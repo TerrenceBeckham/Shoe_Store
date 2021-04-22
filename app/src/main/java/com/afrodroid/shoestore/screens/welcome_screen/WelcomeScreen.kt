@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
-import com.afrodroid.shoestore.R
 import com.afrodroid.shoestore.databinding.WelcomeScreenBinding
 import timber.log.Timber
 
@@ -27,7 +25,6 @@ class WelcomeScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = WelcomeScreenBinding.inflate(inflater, container, false)
-        binding.instuctionScreenButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_welcomeScreen_to_instructionScreen))
         return binding.root
     }
 
