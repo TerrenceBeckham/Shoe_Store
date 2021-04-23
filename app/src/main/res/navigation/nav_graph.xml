@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/loginScreen">
     <fragment
         android:id="@+id/loginScreen"
@@ -13,5 +15,30 @@
     <fragment
         android:id="@+id/welcomeScreen"
         android:name="com.afrodroid.shoestore.screens.welcome_screen.WelcomeScreen"
-        android:label="WelcomeScreen" />
+        android:label="WelcomeScreen" >
+        <action
+            android:id="@+id/action_welcomeScreen_to_instructionScreen"
+            app:destination="@id/instructionScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionScreen"
+        android:name="com.afrodroid.shoestore.screens.instruction_screen.InstructionScreen"
+        android:label="InstructionScreen" >
+        <action
+            android:id="@+id/action_instructionScreen_to_shoeListScreen"
+            app:destination="@id/shoeListScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListScreen"
+        android:name="com.afrodroid.shoestore.screens.shoelist_screen.ShoeListScreen"
+        android:label="ShoeListScreen" >
+        <action
+            android:id="@+id/action_shoeListScreen_to_shoeDetailFragment"
+            app:destination="@id/shoeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.afrodroid.shoestore.screens.shoe_detail_screen.ShoeDetailScreen"
+        android:label="shoe_detail_fragment"
+        tools:layout="@layout/shoe_detail_fragment" />
 </navigation>
