@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import com.afrodroid.shoestore.R
 import com.afrodroid.shoestore.databinding.InstructionScreenFragmentBinding
 import com.afrodroid.shoestore.databinding.ShoeListScreenFragmentBinding
@@ -28,15 +27,6 @@ class ShoeListScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = ShoeListScreenFragmentBinding.inflate(inflater, container, false)
-
-        //Launch ShoeDetail Screen
-        binding.shoeDetailButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(
-                R.id.action_shoeListScreen_to_shoeDetailFragment
-            )
-        )
-
-
         return binding.root
     }
 
@@ -45,7 +35,6 @@ class ShoeListScreen : Fragment() {
         viewModel = ViewModelProvider(this).get(ShoeListScreenViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
